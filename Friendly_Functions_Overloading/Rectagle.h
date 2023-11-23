@@ -46,6 +46,12 @@ public:
 		if (this->yO < 0) {
 			this->yO = 0;
 		}
+		if (this->xO >= (10 + x)) {
+			xb = !xb;
+		}
+		if (this->yO >= (10 + y)) {
+			yb = !yb;
+		}
 	}
 	void operator()(int xO, int yO) {
 		perm(xO, yO);

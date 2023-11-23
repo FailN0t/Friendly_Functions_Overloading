@@ -50,7 +50,7 @@ void operator +=(Point2& point2, int n) {
 int main()
 {
 	Rectangle1 rec(3, 3, 3, 3);
-	for (size_t i = 0; i < 10; i++)
+	while(true)
 	{
 		system("cls");
 		cout << rec;
