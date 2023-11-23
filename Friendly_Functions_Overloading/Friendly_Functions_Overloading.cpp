@@ -1,8 +1,8 @@
 ﻿// Friendly_Functions_Overloading.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#include <iostream>
-using namespace std;
+#include "Rectagle.h"
+#include <Windows.h>
 
 class Point2;
 
@@ -49,21 +49,15 @@ void operator +=(Point2& point2, int n) {
 
 int main()
 {
-	Point2 po;
-	po.print();
-	po.print2();
-	double c;
-	Point point;
-	c = (double)point;
-	cout << c << endl;
-
-	if (point) {
-		cout << (double)point << endl;
+	Rectangle1 rec(3, 3, 2, 3);
+	for (size_t i = 0; i < 10; i++)
+	{
+		system("cls");
+		cout << rec;
+		rec += 1;
+		Sleep(500);
 	}
 
-	sum(po, 90);
-	po.print2();
-	
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
