@@ -13,7 +13,7 @@ class Point {
 		cout << x << endl;
 	}
 	friend void sum(Point2& point2, int i);
-	friend void operator +(Point2& point2, int n);
+	friend void operator +=(Point2& point2, int n);
 public:
 	operator double() {
 		return (double)(x + 10);
@@ -34,11 +34,15 @@ public:
 		cout << point.x << endl;
 	}
 	friend void sum(Point2& point2, int i);
-	friend void operator +(Point2& point2, int n);
+	friend void operator +=(Point2& point2, int n);
 };
 
 void sum(Point2& point2, int i) {
 	point2.point.x += i;
+}
+
+void operator +=(Point2& point2, int n) {
+	point2.point.x += n;
 }
 
 
