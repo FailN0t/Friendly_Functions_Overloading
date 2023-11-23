@@ -2,12 +2,60 @@
 //
 
 #include <iostream>
+using namespace std;
+
+class Point2;
+
+class Point {
+	int x = 6;
+	friend Point2;
+	void print() {
+		cout << x << endl;
+	}
+	friend void sum(Point2& point2, int i);
+public:
+	operator double() {
+		return (double)(x + 10);
+	}
+	operator bool() {
+		return true;
+	}
+	
+};
+
+class Point2 {
+	Point point;
+public:
+	void print() {
+		point.print();
+	}
+	void print2() {
+		cout << point.x << endl;
+	}
+	friend void sum(Point2& point2, int i);
+};
+
+void sum(Point2& point2, int i) {
+	point2.point.x += i;
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    std::cout << " hell o ";
-    safdasdas
+	Point2 po;
+	po.print();
+	po.print2();
+	double c;
+	Point point;
+	c = (double)point;
+	cout << c << endl;
+
+	if (point) {
+		cout << (double)point << endl;
+	}
+
+	sum(po, 90);
+	po.print2();
+	
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
