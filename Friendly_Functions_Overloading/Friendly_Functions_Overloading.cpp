@@ -54,7 +54,7 @@ int main()
 	{
 		system("cls");
 		cout << rec;
-		rec += 1;
+		rec();
 		Sleep(500);
 	}
 
