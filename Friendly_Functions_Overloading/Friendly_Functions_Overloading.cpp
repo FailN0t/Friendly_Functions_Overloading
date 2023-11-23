@@ -49,7 +49,7 @@ void operator +=(Point2& point2, int n) {
 
 int main()
 {
-	Rectangle1 rec(3, 3, 2, 3);
+	Rectangle1 rec(3, 3, 5, 3);
 	for (size_t i = 0; i < 10; i++)
 	{
 		system("cls");

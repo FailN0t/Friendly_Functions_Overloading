@@ -15,17 +15,16 @@ public:
 		{
 			ost << endl;
 		}
-		
 
 		for (size_t i = 0; i < rec.y; i++)
 		{
+			for (size_t i = 0; i < rec.xO; i++)
+			{
+				ost << "  ";
+			}
 			for (size_t j = 0; j < rec.x; j++)
 			{
-				for (size_t i = 0; i < rec.xO; i++)
-				{
-					ost << " ";
-				}
-				ost << "#";
+				ost << "#  ";
 			}
 			ost << endl;
 		}
